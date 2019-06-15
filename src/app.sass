@@ -55,3 +55,34 @@ span.link
 
 .im
   background-color: transparent 
+
+#cases
+  +flex-r
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: flex-start
+  margin-top: 100px
+  +mobile-padding
+
+@media screen and (min-width: 768px)
+  #cases
+    +tablet-padding
+    margin-top: 200px
+
+    .case:nth-child(odd)
+      padding-right: 30px
+
+      .info
+        width: calc(100% - 60px)
+        left: 15px
+
+    .case:nth-child(even)
+      padding-left: 30px
+
+      .info
+        width: calc(100% - 60px)
+        left: 45px
+
+@media screen and (min-width: 1280px)
+  #cases
+    +desktop-padding

@@ -1,3 +1,4 @@
 export default {
-  name: "Case"
+  name: "Case",
+  props: ["c"]
 };

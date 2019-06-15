@@ -4,15 +4,17 @@
 
 #hello
   +flex-c
+  +mobile-padding
 
   p
-    font-size: 3.75rem
+    font-size: 2rem
     color: $purple
-    line-height: 72px 
+    line-height: 32px 
 
   .link
-    align-self: flex-end
-    margin: -30px 0 
+    align-self: center
+    margin: 100px 0 0 0
+    background-color: transparent
 
     .im
       +bounceH
@@ -21,6 +23,22 @@
   #hello
     +tablet
 
+    p 
+      font-size: 2.5rem
+      line-height: 44px
+
+    .link
+      align-self: flex-end
+      margin: -30px 0 
+
 @media screen and (min-width: 1280px)
   #hello
     +desktop
+
+    p
+      font-size: 3.75rem
+      line-height: 72px 
+    
+    .link
+      align-self: flex-end
+      margin: -30px 0 

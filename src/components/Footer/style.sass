@@ -1,0 +1,67 @@
+@import "../../styles/colors"
+@import "../../styles/mixins"
+  
+#footer
+  +flex-c
+  +mobile-padding
+  width: 100%
+  font-size: 1rem
+  margin-bottom: 40px
+
+  .end
+    color: $gray
+    cursor: default
+
+  nav
+    +flex-c
+
+    .menu 
+      +flex-c
+      margin-top: 30px
+
+      .link
+        +transition(.1s)
+        font-weight: 700
+        color: $gray
+
+      .link.active,
+      .link:hover
+        +transition(.1s)
+        color: $purple
+
+    .networks 
+      margin-top: 20px
+
+    .networks span.im:hover
+      +transition(.1s)
+      color: $purple
+
+    .networks span.im
+      +transition(.1s)
+      color: $gray
+      cursor: pointer
+
+@media screen and (min-width: 768px)
+  #footer
+    +tablet
+    font-size: 2rem
+
+    nav
+      +flex-r 
+      justify-content: space-between
+      align-items: flex-end
+
+      .networks
+        margin-top: 0
+
+      .menu 
+        +flex-r
+        margin: 60px 0 0 0
+        
+        .link
+          font-size: 2rem
+          margin-right: 30px
+
+@media screen and (min-width: 1280px)
+  #footer
+    +desktop

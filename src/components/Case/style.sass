@@ -1,0 +1,51 @@
+@import "../../styles/colors"
+@import "../../styles/mixins"
+  
+.case
+  +flex-c
+  width: 100%
+  position: relative
+  margin-bottom: 20px
+    
+  .info
+    opacity: 0
+    z-index: 2
+    width: calc(100% - 20px)
+    height: calc(100% - 20px)
+    display: flex
+    left: 10px
+    top: 10px
+    position: absolute
+    align-items: center
+    justify-content: center
+    text-align: center
+    background-color: $white
+    cursor: pointer
+    +transition(.1s)
+  
+    .title
+      background-color: transparent 
+      color: $purple
+
+  img
+    width: 100%
+
+.case:hover .info,
+.case .info:hover
+  opacity: 1
+  +transition(.1s)
+
+@media screen and (min-width: 768px)
+  .case
+    width: 50%
+    margin-bottom: 60px
+
+    .info
+      font-size: 1.5rem
+      height: calc(100% - 30px)
+      top: 15px
+
+@media screen and (min-width: 1280px)
+
+  .case .info
+    font-size: 2rem

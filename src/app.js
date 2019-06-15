@@ -1,6 +1,24 @@
-import { Header, Hello } from "./components";
+import { Header, Hello, Case, Footer } from "./components";
 
 export default {
-  name: "app",
-  components: { Header, Hello }
+  name: "App",
+  components: { Header, Hello, Case, Footer },
+  data: () => {
+    return {
+      cases: [
+        {
+          id: 1,
+          name: "Social Media - Scopo"
+        },
+        {
+          id: 2,
+          name: "Marketing Digital - Agromall"
+        },
+        {
+          id: 3,
+          name: "Marketing Digital - Crooks"
+        }
+      ]
+    };
+  }
 };
