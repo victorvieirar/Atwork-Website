@@ -1,3 +1,8 @@
 export default {
-  name: "Header"
+  name: "Header",
+  data() {
+    return {
+      openMenu: false
+    };
+  }
 };

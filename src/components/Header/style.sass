@@ -1,0 +1,58 @@
+@import "../../styles/colors"
+@import "../../styles/mixins"
+  
+#header
+  width: 100%
+  padding-top: 60px
+  padding-bottom: 60px
+  +flex-r
+  justify-content: space-between
+  align-items: center
+  +mobile_padding
+
+  .menu 
+    display: flex
+    height: 12.5px
+    flex-direction: column
+    justify-content: space-between
+    cursor: pointer
+    +collapse
+
+  .menu::before,
+  .menu::after
+    content: ""
+    border-bottom: 2px solid $purple
+    width: 22.5px
+
+  .logo
+    width: 35px
+
+  .menu:hover
+    +expand
+
+  .menu:not(.open)::after
+    +closeMenu(1)
+
+  .menu:not(.open)::before
+    +closeMenu(0)
+
+  .menu.open
+    justify-content: center
+
+  .menu.open::after
+    +openMenu(1)
+
+  .menu.open::before
+    +openMenu(0)
+
+  .menu.open::before,
+  .menu.open::after 
+    margin: -1px    
+
+@media screen and (min-width: 768px)
+  #header
+    +tablet
+  
+@media screen and (min-width: 1280px)
+  #header
+    +desktop

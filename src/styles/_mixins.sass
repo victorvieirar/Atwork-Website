@@ -1,0 +1,53 @@
+@import "./animations"
+  
+=expand
+  animation: expand 0.1s ease-in forwards
+  
+=collapse
+  animation: collapse 0.1s ease-in forwards
+
+=mobile_padding
+  padding-left: calc(50% - 120px)
+  padding-right: calc(50% - 120px)
+
+=tablet_padding
+  padding-left: calc(50% - 360px)
+  padding-right: calc(50% - 360px)
+
+=desktop_padding
+  padding-left: calc(50% - 600px)
+  padding-right: calc(50% - 600px)
+
+=tablet
+  +tablet_padding
+
+=desktop
+  +desktop_padding
+
+=openMenu($type)
+  @if $type == 0
+    animation: openMenuTop 0.1s ease-in forwards
+  @else
+    animation: openMenuBottom 0.1s ease-in forwards
+
+=closeMenu($type)
+  @if $type == 0
+    animation: closeMenuTop 0.1s ease-in forwards
+  @else
+    animation: closeMenuBottom 0.1s ease-in forwards
+
+=flex-c
+  display: flex
+  flex-direction: column
+
+=flex-r
+  display: flex
+  flex-direction: row
+
+=transition($time)
+  transition: $time ease-in
+  -webkit-transition: $time ease-in
+  -moz-transition: $time ease-in
+
+=bounceH 
+  animation: bounceH .5s ease-in-out alternate infinite
